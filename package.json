@@ -1,5 +1,5 @@
 {
-  "name": "urssafassur-api-preview-2",
+  "name": "urssafassur-api-preview",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
