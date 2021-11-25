@@ -30,9 +30,10 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # Slim is a template language whose goal is reduce the syntax to the essential parts without becoming cryptic.
 gem 'slim', '~> 3.0', '>= 3.0.6'
-
 # The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web. http://getbootstrap.com
 gem 'bootstrap', '~> 5.1.3'
+# Forms made easy!
+gem 'simple_form', '~> 5.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
