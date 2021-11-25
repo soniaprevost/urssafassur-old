@@ -34,6 +34,8 @@ gem 'slim', '~> 3.0', '>= 3.0.6'
 gem 'bootstrap', '~> 5.1.3'
 # Forms made easy!
 gem 'simple_form', '~> 5.1'
+# A set of common locale data and translations to internationalize and/or localize your Rails applications.
+gem 'rails-i18n', '~> 6.0.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

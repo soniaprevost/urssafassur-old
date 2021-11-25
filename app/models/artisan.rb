@@ -1,4 +1,5 @@
 class Artisan < ApplicationRecord
+  validates :secteur, presence: true
   validate :check_siret_length
 
   def check_siret_length
