@@ -36,6 +36,8 @@ gem 'bootstrap', '~> 5.1.3'
 gem 'simple_form', '~> 5.1'
 # A set of common locale data and translations to internationalize and/or localize your Rails applications.
 gem 'rails-i18n', '~> 6.0.0'
+# HTTP/REST API client library.
+gem 'faraday', '~> 1.8'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
