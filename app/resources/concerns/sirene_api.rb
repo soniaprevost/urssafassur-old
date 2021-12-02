@@ -21,8 +21,11 @@ class SireneApi
     token = hash["access_token"]
   end
 
-  def retrieve_siren(siren)
-    url = "https://api.insee.fr/entreprises/sirene/V3/siren/#{siren}"
+  def retrieve_company_infos(company_number)
+    return "numéro invalide" unless company_number.size == 9 || company_number.size == 14
+
+    siret_or_siren = siret_or_siren == 9 ? "siret" : "siren"
+    url = "https://api.insee.fr/entreprises/sirene/V3/#{siret_or_siren}/#{company_number}"
     access_token = self.generate_token
 
     response = Faraday.get(url) do |req|
