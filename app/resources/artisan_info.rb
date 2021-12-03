@@ -19,7 +19,7 @@ class ArtisanInfo
         ape: company["etablissement"]["uniteLegale"]["activitePrincipaleUniteLegale"]
       )
     else
-      return "Le Siret ne correspond pas à un auto-entrepreneur"
+      raise StandardError, "Le Siret ne correspond pas à un auto-entrepreneur"
     end
   end
 
