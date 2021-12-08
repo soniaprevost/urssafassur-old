@@ -18,5 +18,3 @@ VCR.configure do |config|
     body if body.include? "access_token"
   end
 end
-
-
