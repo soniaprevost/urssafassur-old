@@ -46,6 +46,10 @@ group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
   # Combine 'pry' with 'byebug'. Adds 'step', 'next', 'finish', 'continue' and 'break' commands to control execution.
   gem 'pry-byebug', '~> 3.9'
+  # Record your test suite's HTTP interactions and replay them during future test runs for fast, deterministic, accurate tests.
+  gem 'vcr', '~> 6.0'
+  # WebMock allows stubbing HTTP requests and setting expectations on HTTP requests.
+  gem 'webmock', '~> 3.14'
 end
 
 group :development do
