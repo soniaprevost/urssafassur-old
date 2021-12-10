@@ -3,7 +3,8 @@ class ArtisanInfo
   def self.get(siret:)
     response = SireneApi.get(
       url: "https://api.insee.fr/entreprises/sirene/V3/siret/#{siret}", 
-      access_token: SireneApi.generate_token
+      access_token: SireneApi.generate_token(Rails.application.credentials.insee_sirene_v3[:consumer_key],
+                                             Rails.application.credentials.insee_sirene_v3[:consumer_secret])
     )
 
     company = JSON.parse response.body

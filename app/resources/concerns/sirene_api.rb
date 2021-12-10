@@ -1,11 +1,8 @@
 require 'base64'
 
 class SireneApi
-  CONSUMER_KEY = Rails.application.credentials.insee_sirene_v3[:consumer_key]
-  CONSUMER_SECRET = Rails.application.credentials.insee_sirene_v3[:consumer_secret]
-
-  def self.generate_token
-    authorization_string = CONSUMER_KEY + ':' + CONSUMER_SECRET
+  def self.generate_token(consumer_key, consumer_secret)
+    authorization_string = consumer_key + ':' + consumer_secret
 
     # Génération du jeton d'accès
     conn = Faraday.new(url: "https://api.insee.fr") do |req|
