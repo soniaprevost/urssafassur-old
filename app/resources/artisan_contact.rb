@@ -1,4 +1,4 @@
-class ArtisanInfo
+class ArtisanContact
 
   def self.get(siret:)
     response = SireneApi.get(
@@ -15,7 +15,7 @@ class ArtisanInfo
               company["etablissement"]["uniteLegale"]["prenomUsuelUniteLegale"],
               company["etablissement"]["uniteLegale"]["nomUniteLegale"]].join(" ")
 
-      ArtisanInfo.new(
+      ArtisanContact.new(
         name: name,
         ape: company["etablissement"]["uniteLegale"]["activitePrincipaleUniteLegale"]
       )
