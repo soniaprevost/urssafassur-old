@@ -1,14 +1,5 @@
 .p-3
-  h1.text-center UrssafassuR
+  h1.text-center = link_to "UrssafassuR", root_path
 
 .row
-  .col-3
-  .p-3.col-6
-    = simple_form_for @artisan do |f|
-      .p-3 = f.input :siret, required: true
-      .p-3 = f.input :secteur, label: "Secteur d'activité"
-      .p-3 = f.submit "Vérifier l'artisan", class: "btn btn-primary"
-
-- if @artisan.name.present?
- = @artisan.name
- = @artisan.ape_code
+  = render partial: "artisans/shared/form", locals: {artisan: @artisan}

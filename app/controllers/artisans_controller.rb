@@ -10,10 +10,15 @@ class ArtisansController < ApplicationController
     if @artisan.save
       update_artisan_with_sirene_api(siret: @artisan.siret)
 
-      redirect_to root_path
+      redirect_to artisan_path(@artisan)
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @artisan = Artisan.find(params[:id])
+    @new_artisan = Artisan.new
   end
 
   private
@@ -22,7 +27,7 @@ class ArtisansController < ApplicationController
     find_artisan = ArtisanContact.get(siret: siret)
     @artisan.update(
       name: find_artisan.name,
-      ape_code: artisan.ape
+      ape_code: find_artisan.ape
     )
   end
 

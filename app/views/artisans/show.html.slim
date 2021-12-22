@@ -1,0 +1,14 @@
+.p-3
+  h1.text-center = link_to "UrssafassuR", root_path
+
+.row
+  = render partial: "artisans/shared/form", locals: {artisan: @new_artisan}
+
+.row
+  .col-3
+  .p-3.col-6
+    .text-center
+      h2.pb-3 Artisan
+      p = "Siret : " + @artisan.siret
+      p = "Nom : " + @artisan.name
+      p = "Code APE : " + @artisan.ape_code

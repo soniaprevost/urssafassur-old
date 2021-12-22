@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root "artisans#new"
 
-  resource :artisans
+  resources :artisans, only: [:new, :create, :show]
 end
